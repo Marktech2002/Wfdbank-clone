@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WAFD Dashboard</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Calibri, "Trebuchet MS", sans-serif;
+      }
+      section {
+        box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 6%),
+          0 0 2px rgb(0 0 0 / 7%);
+
+        padding-bottom: 20px;
+      }
+
+      header {
+        background-color: #58c672;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 10px;
+        height: 190px;
+        font-family: sans-serif;
+      }
+      header h3 {
+        margin: 32px;
+        color: #fff;
+        letter-spacing: 1px;
+        font-size: 1.1em;
+        font-weight: 500;
+      }
+
+      header img {
+        width: 300px;
+        padding: 20px;
+      }
+
+      h5.hd {
+        margin: 25px;
+        font-size: 1.32em;
+      }
+      .info-container {
+        margin-top: 30px;
+      }
+
+      .balance-container img {
+        width: 30px;
+        position: absolute;
+        margin-top: 8px;
+        left: 9;
+      }
+      .figures {
+        font-size: 1.2em;
+        font-weight: 800;
+        margin-left: 130px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+
+      .figures.balance {
+        font-weight: 400;
+      }
+      .acct-fig {
+        margin-left: 45px;
+      }
+
+      .acct-fig h5 {
+        font-weight: 900;
+        font-size: 1.1em;
+        letter-spacing: -1px;
+      }
+      .acct-fig p {
+        font-size: large;
+        font-weight: 400;
+      }
+
+      .balance-container {
+        margin: 20px;
+        border: 1px solid #2e5437;
+        border-top-width: 0px;
+        border-left-width: 0px;
+        padding-bottom: 20px;
+      }
+
+      /* modal error */
+      .modal-box {
+        display: none;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.5); 
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transition: ease-in-out ;
+      
+      }
+
+      .modal-box .error {
+        width: 65px;
+        height: 60px;
+        background-color: #cb3535;
+        border-radius:50% ;
+        color: #fff;
+        margin: auto;
+        padding-top: 10px;
+        margin-bottom: 20px;
+        
+      }
+
+      .modal-box .box-content {
+        font-size: 1em ;
+        color: #808080;
+        width: 320px;
+        text-align: center;
+        position: relative;
+        top: 50%;
+        padding-top: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        margin: -100px auto 50px; 
+        animation: modalopen 2s; 
+      }
+
+      .modal-box .box-content p {
+           padding: 20px;
+      }
+
+      @keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+    /* spinner class */
+
+  .loader-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    position: fixed;
+    background: #fff;
+    z-index: 100;
+}
+
+   .spinner {
+    width: 64px;
+    height: 64px;
+    border: 8px solid;
+    border-color: #28a745 transparent #58c672 transparent;
+    border-radius: 50%;
+    animation: spin-anim 1500ms linear infinite;
+}
+
+@keyframes spin-anim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+      footer {
+        background-color: #28a745;
+        width: 100%;
+        height: auto;
+        position: fixed;
+        bottom: 0;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        display: flex;
+
+      }
+
+      footer .ft-icon p {
+          padding-left: 20px;
+          padding-bottom: 8px;
+      }
+
+      footer img {
+        width: 70px;
+        mix-blend-mode: hard-light;
+        padding-left: 25px;
+        padding-top: 5px;
+        padding-right: 5px;
+      }
+
+      @media(max-width:320px) {
+        .figures {
+        font-size: 1em;
+        font-weight: 800;
+        margin-left: 50px;
+      }
+
+      .mb-icon {
+        display: none;
+      }
+      
+      footer {
+        padding-left: 10px;
+      }
+      footer img {
+        padding-left: 23px;
+        margin-left: 2px;
+        width: 60px;
+      }
+
+      }
+
+    .btn {
+      padding: 7px;
+      color: #fff;
+      background-color: #28a745;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      font-size: 17px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #2e5437;
+    }
+    </style>
+  </head>
+
+  <body>
+    <!-- head -->
+    <header>
+      <a href="/index.html"><img src="images/download.svg" /></a>
+      <h3>Welcome, Bernard.</h3>
+    </header>
+
+    <div class="modal-box">
+            
+           <div class="box-content">
+            
+            <div class="error">
+              <h1>X</h1>
+            </div>
+            <h3> Transaction Failed!</h3>
+               <p>There is an issue with your account 
+                you need to make deposit of $5000 inorder to have full access to your accout 
+               </p>
+                <button class="btn" type="button">Thank You</button>
+           </div>
+    </div>
+    <section>
+      <h5 class="hd">Accounts</h5>
+      <div class="info-container">
+        <div class="balance-container">
+          <img src="images/smalllogo.jpg" />
+          <div class="acct-fig">
+            <h5>Walt's Checking</h5>
+            <p>
+              <small
+                >Available:<span class="figures">$1,802,868.98</span><br />
+                Balance :
+                <span class="figures balance">$967,521.51</span></small
+              >
+            </p>
+          </div>
+        </div>
+        <div class="balance-container">
+          <img src="images/smalllogo.jpg" />
+          <div class="acct-fig">
+            <h5>Walt's Savings</h5>
+            <p>
+              <small
+                >Available <br />
+                Balance : <span class="figures balance">$92,221.91</span></small
+              >
+            </p>
+          </div>
+        </div>
+        <div class="balance-container">
+          <img src="images/smalllogo.jpg" />
+          <div class="acct-fig">
+            <h5>Walt's HELO</h5>
+            <p>
+              <small>
+                Balance <span class="figures balance">$1,530.03</span></small
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+     
+    <div class="loader-container">
+        <div class="spinner"></div>
+    </div>
+    
+    <footer>
+      <div class="ft-icon">
+        <img src="images/homedashborad.png" />
+        <p>Home</p>
+      </div>
+      <div class="ft-icon">
+        <img src="images/deposit.png" />
+        <p>Deposit</p>
+      </div>
+
+      <div class="ft-icon">
+        <img src="images/payment.png" />
+        <p>Payment</p>
+      </div>
+
+      <div class="ft-icon transfer">
+        <img class ="transfer" src="images/transfer.png"/>
+        <p class="transfer">Transfer</p>
+      </div>
+
+      <div class="ft-icon mb-icon">
+        <img src="images/menu.png" />
+        <p>Menu</p>
+      </div>
+    </footer>
+
+    <script>
+
+      function spinner () {
+         loadercontainer.style.display = "none" ;
+      }
+
+  
+        const transferbtn = document.querySelector(".transfer");
+        const icons = document.querySelectorAll(".ft-icon");
+        const loadercontainer = document.querySelector(".loader-container");
+        const modalError = document.querySelector(".modal-box");
+        const close_btn = document.querySelector(".btn").addEventListener('click' , ()=> {
+          modalError.style.display = "none" ;
+        })
+
+        window.addEventListener('load' , spinner);
+        icons.forEach((icon)=> {
+           icon.addEventListener('click' , ()=> { 
+             openModal();
+           });
+          
+        });
+      
+        
+
+
+        function showanimation () {
+          setInterval(()=> {loadercontainer.style.display = "flex";} , 1000);
+        
+        }
+        function openModal() {
+         modalError.style.display = "block" ;
+        }
+         
+         
+           
+
+       
+    </script>
+  </body>
+</html>
